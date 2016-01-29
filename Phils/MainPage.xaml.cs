@@ -30,7 +30,7 @@ namespace Phils
         private int _RsfHour = 09;
         private int _RsfMinutes = 30;
 
-        private int _PrioHour = 11;
+        private int _PrioHour = 10;
         private int _PrioMinutes = 00;
 
         private int _PhilsHour = 10;
