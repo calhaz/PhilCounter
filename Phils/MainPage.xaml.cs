@@ -73,8 +73,11 @@ namespace Phils
             //If clock is before 10:00, next item is PRIO daily
             if (now.Hour <= _PrioHour)
             {
+                if(now.Hour == _PhilsHour && now.DayOfWeek == DayOfWeek.Friday)
+                    return MinutesLeftToPrio(_antalMinuterTillPhils, _PhilsHour, _PhilsMinutes, "Phils", NextFriday(), "GO GO GO to Phils and eat lots of hamburgers");
+
                 //if(now.Hour <= _PrioHour && now.Minute < _PrioMinutes)
-                    return MinutesLeftToPrio(_antalMinuterTillPrioDaily, _PrioHour, _PrioMinutes, "PRIO daily standup", now.Day);
+                return MinutesLeftToPrio(_antalMinuterTillPrioDaily, _PrioHour, _PrioMinutes, "PRIO daily standup", now.Day);
             }
 
             //Else if clock i past 10:00 on a friday, next item is Phils
